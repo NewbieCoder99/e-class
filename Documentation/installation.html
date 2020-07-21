@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+     <title>eClass - Learning Management System</title>    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="eClass is an totally adjustable learning platform for instructors around the world. Go past the bounds of conventional eClass arrangements, and be constrained uniquely by your very own creative mind.">
+    <meta name="keywords" content="eClass, laravel eClass, PHP eClass, eClass shopping cart, eClass software, eClass website,  online learning, online store, shopping cart, instructor, eClass cart, eClass marketplace" />
+    <meta name="author" content="Media City">    
+    <link rel="shortcut icon" href="assets/images/favicon.png">     
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/css/atom-one-dark.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body class="docs-page">    
+    <header class="header fixed-top">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2 main-header">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon mr-2" src="assets/images/logo.png" alt="logo" width="100px"><span class="logo-text"></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+	            	<div class="top-search-box d-none d-lg-flex">
+		                <form class="search-form">
+				            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+				            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+				        </form>
+	                </div>
+	                <div class="docs-top-menu">
+	                	<ul>
+	                		<li class="docs-top-menu-item" title="Documentation"><a href="index.html">Docs</a></li>
+	                		<li class="docs-top-menu-item" title="About-Us"><a href="https://mediacity.co.in/index.html" target="_blank">About Us</a></li>
+	                		<li class="docs-top-menu-item" title="Our-Services"><a href="https://mediacity.co.in/contact.html" target="_blank">Contact Us</a></li>
+	                	</ul>
+	                </div><!--//social-list-->
+		            <a href="https://codecanyon.net/user/media-city/portfolio" class="btn btn-primary d-none d-lg-flex" target="_blank">Portfolio</a>
+
+	            </div><!--//docs-top-utilities-->
+
+            </div><!--//container-->
+            <div id="navbar">
+			  <a href="introduction.html">Introduction</a>
+			  <a class="active" href="installation.html">Installation</a>			 
+			  <a href="faq.html">FAQ</a>
+			  <a href="changelog.html">Change Log</a>
+			  <a href="update.html">Update Process</a>
+			  <a href="conclusion.html">Conclusion</a>
+			</div>
+        </div><!--//branding-->
+
+    </header><!--//header-->
+
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar section-divider">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>Installation</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Installation</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Installation with Apache</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Shared Hosting Install</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Server Requirements</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">Installing eClass</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-6">PWA Setup</a></li>
+			    </ul>
+			</nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+
+	    <div class="docs-content section-divider">
+		    <div class="container">
+			    <article class="docs-article" id="section-1">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Installation</h1>
+					    <section class="docs-intro">
+						</section><!--//docs-intro-->
+					</header>
+
+				    <section class="docs-section" id="item-1-1">
+						<h2 class="section-heading">Introduction</h2>
+						<p>Before install make sure you have the proper server requirements</p>
+						<pre>
+							PHP 7.2
+							OpenSSL PHP Extension 
+							PHP Fileinfo extension
+							PHP Zip Archive
+						</pre>
+						<p>File and folder permissions</p>
+						<pre>
+							/bootstrap        775
+							/public/	  775
+							/storage          775
+							/public/images	  777
+							.env              775
+						</pre>
+                    </section><!--//section-->
+					
+					<section class="docs-section" id="item-1-2">
+						<h2 class="section-heading">Installation with Apache</h2>
+						<p>Before installing, make sure mod_rewrite is enabled.</p>
+						<p>Unzip the source file</p>
+						<pre>
+							cd /home/user/
+							unzip eClass.zip
+						</pre>
+						<p>/home/user/eClass, you can configure Apache virtual host as follows (remember to point the DocumentRoot to the public folder of the source)</p>
+						<pre>
+							&lt;VirtualHost *:80&gt;
+							ServerName yoursite.com
+							DocumentRoot "/home/user/eClass/public"
+							Options Indexes FollowSymLinks
+							&lt;Directory "/home/user/eClass/public"&gt;
+								AllowOverride All
+								Require all granted
+							&lt;/Directory&gt;
+							&lt;/VirtualHost&gt;
+						</pre>
+						<p>Change the director/file’s owner to Apache’s running user (www-data for example), to make sure it has proper permission on your source files</p>
+						<pre>
+							sudo chown www-data:www-data -R /home/user/eClass
+							sudo chmod 775 -R /home/user/eClass
+						</pre>
+						<p>Then restart Apache.</p>	
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-1-3">
+						<h2 class="section-heading">Shared Hosting Install</h2>
+                        <p>Consider that this is the webroot folder for your eClass website:&nbsp;<code>/home/myusername/public_html/</code></p>
+						<p>Put all the main folder’s files in your eClass website at&nbsp;<code>/home/myusername/public_html/</code></p>
+						<p>Create MySQL database, add user to it with full permissions. </p>							
+						<h6><a href="https://www.youtube.com/watch?v=WkuYh4-NF8M&t=22s" target="_blank">Watch Installation Video</a></h6>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-1-4">
+						<h2 class="section-heading">Server Requirements</h2><hr/>
+						<p>Before you install eclass make sure your server meets the following requirements:</p>
+						<ul>
+							<li>PHP 7.2</li>
+							<li>Allow furl extension must be enabled</li>
+							<li>OpenSSL PHP Extension</li>
+							<li>JSON PHP Extension</li>
+							<li>Ctype PHP Extension</li>
+							<li>XML PHP Extension</li>
+							<li>Tokenizer PHP Extension</li>
+							<li>Mbstring PHP Extension</li>
+							<li>PDO PHP Extension</li>
+							<li>Intl PHP Extension</li>
+							<li>MySQL 5.6+</li>
+							<li>BCMath PHP Extension</li>
+							<li>Ctype PHP Extension</li>
+							<li>JSON PHP Extension</li>
+							<li>Mbstring PHP Extension</li>
+							<li>OpenSSL PHP Extension</li>
+							<li>PDO PHP Extension</li>
+							<li>Tokenizer PHP Extension</li>
+							<li>XML PHP Extension</li>
+						</ul>
+						<p>For VPS use Ubuntu 16.4 OS, Also install Apache 2, PHP, MySQL, Phpmyadmin, Zip, Unzip</p>
+						<h2 class="section-heading">Server Requirements For Big Blue Button</h2><hr/>
+						<p>Before you Enable Big Blue Button in enclass make sure your server meets the following requirements: <a href="https://docs.bigbluebutton.org/2.2/install.html" target="_blank">https://docs.bigbluebutton.org/2.2/install.html</a></p>	
+						<p>For Config Big Blue Button: <a href="https://docs.bigbluebutton.org/admin/bbb-conf.html" target="_blank">https://docs.bigbluebutton.org/admin/bbb-conf.html</a></p>
+						<a href="https://www.youtube.com/watch?v=MYewvF-qzLY&list=PLs9JJVQP1gn0DjZUG_rboxZUUSJFvZrm5&index=30" target="_blank">Watch Setup Video </a>
+												
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-1-5">
+						<h2 class="section-heading">Installing eClass</h2>
+						<p>As our product is power pack with such huge numbers of highlights, here our installment goes with simple process and get finished in just 8 steps. Fill all the informations carefully. Here, you can check out demo content of installation with detailed screen shots :</p><br>
+						<p>to run installation use : <b>Yourdoamin.com/public</b></p><br>
+						<div class="installation-content">
+							<img src="assets/images/installation/1.png" alt="terms and condition" width="100%">
+							<p class="installation-text">Peruse every one of the terms and conditions cautiously. Concur with the check box and their you go with keep on establishment.</p>
+						</div><hr>
+						<div class="installation-content">
+							<img src="assets/images/installation/2.png" alt="Server Requirement" width="100%">
+							<p class="installation-text">Here, it shows our server requirements. If all requirements status are OK you are good to go, on the off chance contact your server administrator with the plugin whose status requirement are not meet.</p>
+						</div><hr>
+						<div class="installation-content">
+							<img src="assets/images/installation/3.png" alt="Purchase Code" width="100%">
+							<p class="installation-text">Enter your Purchase code detail sent you by Envato.</p>
+						</div><hr>
+						<div class="installation-content">
+							<h2>Step: 1</h2>
+							<p><b>Note: </b>Don't Give Space in App Name and Mail Sender Name</p>
+							<img src="assets/images/installation/4.png" alt="Basic Mail Detail" width="100%">
+							<p class="installation-text">Fill the details carefully.<br/>In Basic Details Section: Application/Project name speaks to your undertaking title. App URL is basically your website domain on which you are hosting your product.<br/>For Mail Detail Section: Enter the name with no spaces. Their are three Mail Drivers: SMTP, Mail, sendmail, if SMTP is not working then check sendmail. <br/></p>
+							<p><b>Gmail SMTP setup settings:</b></p>
+							<ul>
+								<li>SMTP username: Your Gmail address.</li>
+								<li>SMTP password: Your Gmail password. If Using Gmail then Use App Password. <a href="https://support.google.com/accounts/answer/185833?hl=en" target="_blank">Process of App Password</a></li>
+								<li>SMTP server address: smtp.gmail.com.</li>
+								<li>Gmail SMTP port (TLS): 587.</li>
+								<li>SMTP port (SSL): 465.</li>
+								<li>SMTP TLS/SSL required: yes.</li>
+							</ul>
+						</div><hr>
+						<div class="installation-content">
+							<h2>Step: 2</h2>
+							<p><b>Note: </b>Don't Give # in Database Password</p>
+							<img src="assets/images/installation/5.png" alt="Databse Setup" width="100%">
+							<p class="installation-text">Fill your database details carefully. In database host you need to fill your host details: generally it's localhost or 127.0.0.1 or if its not working, you can find it from your hosting provider.</p>
+						</div><hr>
+						<div class="installation-content">
+							<h2>Step: 3</h2>
+							<img src="assets/images/installation/6.png" alt="Site Setting" width="100%">
+							<p class="installation-text">Project title and description will use in your SEO, so make it attractive and catchable. Default email helps your customer to contact you via mail. Address could be your Head Office address. Choose you permanent or default contact number via vendor and customer can contact you. Once, currency is choose it can't be changed, still if you wanna change then you need to re-install the project.</p>
+						</div><hr>
+						<div class="installation-content">
+							<h2>Step: 4</h2>
+							<img src="assets/images/installation/7.png" alt="admin-details" width="100%">
+							<p class="installation-text">Admin is the one who have all the powers to control the whole site. Enter the email and password carefully as you are gonna need them while login  to site.</p>
+						</div>
+						<div class="installation-content">
+							<h2>Final Phase</h2>
+							<img src="assets/images/installation/8.png" alt="Store Setting" width="100%">
+							<p class="installation-text">Lastly, do your custom settings and you are good to go.</p>
+						</div>
+						<br/>
+					<h6><a href="https://www.youtube.com/watch?v=WkuYh4-NF8M&t=22s" target="_blank">Watch Installation Video</a></h6>
+					<a href="https://www.youtube.com/watch?v=WkuYh4-NF8M&t=22s" target="_blank"><img src="assets/images/installation.jpg"></a>
+					</section><!--//section-->					
+					<br/>
+					<section class="docs-section" id="item-1-6">
+						<h2 class="section-heading">PWA Setup</h2>
+						 <p>SSL (https://) required for PWA. it's not anroid app, it's light app.</p>
+                        <p>go to public and find file <code>manifest.json</code> and enter your URL</code></p>
+<pre><code>
+"start_url": "YOUR_URL/?launcher=true",
+	
+</code></pre>
+  <p>go to public and find file <code>sw.js</code> and enter your URL</code></p>
+<pre><code>
+const URLS_TO_CACHE = [
+    "YOUR_URL/offline",
+];
+	
+</code></pre>
+				<p>go to <code>public -> images -> icons</code> and change icons -> <code>icon36x36.png, icon48x48.png, icon72x72.png, icon96x96.png, icon144x144.png,icon168x168.png, icon192x192.png, icon256x256.png</code></p>
+						
+						
+						
+					</section><!--//section-->
+					<br/>
+				</article>
+
+			    <footer class="footer">
+				    <div class="container text-center py-5">
+				    	<small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="https://mediacity.co.in/index.html" target="_blank">mediacity</a>  |  Documentation  Template by <a class="theme-link" href="https://themes.3rdwavemedia.com" target="_blank">CoderDocs</a></small>
+				        <ul class="social-list list-unstyled pb-4 mb-0">
+						    <li class="list-inline-item"><a href="https://twitter.com/mediacityin" target="_blank"><i class="fab fa-twitter fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="https://www.youtube.com/c/mediacitycoin/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+				            <li class="list-inline-item"><a href="https://www.behance.net/media-city" target="_blank"><i class="fab fa-behance"></i></i></a></li>
+				            <li class="list-inline-item"><a href="https://www.facebook.com/mediacityindia/" target="_blank"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="https://dribbble.com/mediacity" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+				        </ul><!--//social-list-->
+				    </div>
+			    </footer>
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
+	
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+
+    <!-- Page Specific JS -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/jquery.scrollTo.min.js"></script>
+    <script src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+
+</body>
+</html> 
+

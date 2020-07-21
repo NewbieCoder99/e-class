@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+     <title>eClass - Learning Management System</title>    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="eClass is an totally adjustable learning platform for instructors around the world. Go past the bounds of conventional eClass arrangements, and be constrained uniquely by your very own creative mind.">
+    <meta name="keywords" content="eClass, laravel eClass, PHP eClass, eClass shopping cart, eClass software, eClass website,  online learning, online store, shopping cart, instructor, eClass cart, eClass marketplace" />
+    <meta name="author" content="Media City">    
+    <link rel="shortcut icon" href="assets/images/favicon.png">     
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/css/atom-one-dark.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body class="docs-page">    
+    <header class="header fixed-top">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2 main-header">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon mr-2" src="assets/images/logo.png" alt="logo" width="100px"><span class="logo-text"></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+	            	<div class="top-search-box d-none d-lg-flex">
+		                <form class="search-form">
+				            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+				            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+				        </form>
+	                </div>
+	                <div class="docs-top-menu">
+	                	<ul>
+	                		<li class="docs-top-menu-item" title="Documentation"><a href="index.html">Docs</a></li>
+	                		<li class="docs-top-menu-item" title="About-Us"><a href="https://mediacity.co.in/index.html" target="_blank">About Us</a></li>
+	                		<li class="docs-top-menu-item" title="Our-Services"><a href="https://mediacity.co.in/contact.html" target="_blank">Contact Us</a></li>
+	                	</ul>
+	                </div><!--//social-list-->
+		            <a href="https://codecanyon.net/user/media-city/portfolio" class="btn btn-primary d-none d-lg-flex" target="_blank">Portfolio</a>
+
+	            </div><!--//docs-top-utilities-->
+
+            </div><!--//container-->
+            <div id="navbar">
+			  <a href="introduction.html">Introduction</a>
+			  <a href="installation.html">Installation</a>
+			  <a class="active" href="faq.html">FAQ</a>
+			  <a href="changelog.html">Change Log</a>
+			  <a href="update.html">Update Process</a>
+			  <a href="conclusion.html">Conclusion</a>
+			</div>
+        </div><!--//branding-->
+
+    </header><!--//header-->
+
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar section-divider">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-9"><span class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>FAQ's</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">General Settings</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Installation Issues</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Mail/API Settings</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Script Setup Videos</a></li>
+			    </ul>
+			</nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+
+	    <div class="docs-content section-divider">
+		    <div class="container">
+			    <article class="docs-article" id="section-9">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">FAQs</h1>
+					    <section class="docs-intro">
+						    <p>Section intro goes here. You can list all your FAQs using the format below.</p>
+						</section><!--//docs-intro-->
+				    </header>
+				    <section class="docs-section" id="item-1-1">
+						<h2 class="section-heading">General Settings</h2>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>HTTP 500 Error?</h5>
+						<p>This error show to PHP version.<br/>
+						Please make sure you select PHP version 7.2.<br/>
+						Please make sure your database all details is correct.<br/>
+						<img src="assets/images/features/http500.png" alt="HTTP 500 Error" width="50%"></p>
+						
+
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Reset password, Login and Register Show Error?</h5>
+						<p>Reset password, Login and Register error show due to you forget add mail details in .env file.<br/>
+						Mail Settings<br/>
+						For Email Sending.<br/>
+						<br/>
+						<p>Enter Mail Details from Admin, Site Settings -> Mail Setting</p>
+						<p>Open and edit&nbsp;<code>.env</code>&nbsp;file.</p>
+<pre><code>
+MAIL_DRIVER=smtp (some times support sendmail)
+MAIL_HOST=smtp.mailtrap.io (For Gmail = smtp.gmail.com)
+MAIL_PORT=2525  (For Gmail = 465)
+MAIL_USERNAME=youremailid
+MAIL_PASSWORD=yourpassword
+MAIL_ENCRYPTION=null  (For Gmail = ssl)
+
+</code></pre>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>PayPal Show Error?</h5>
+						<p>You get PayPal error due to <br/>		
+						Check PayPal Currency<br/>
+						Check Mail Settings<br/></p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>New User Registration Show Error?</h5>
+						<p>New User Registration error show due to you forget add mail details in .env file.<br/>
+						Mail Settings<br/>
+						For Email Sending.<br/>
+<pre><code>
+MAIL_DRIVER=smtp (some times support sendmail)
+MAIL_HOST=smtp.mailtrap.io (For Gmail = smtp.gmail.com)
+MAIL_PORT=2525  (For Gmail = 465)
+MAIL_USERNAME=youremailid
+MAIL_PASSWORD=yourpassword
+MAIL_ENCRYPTION=null  (For Gmail = ssl)
+
+</code></pre>
+						<br/>
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>How to php increase upload file size limit ?</h5>
+						<p>Its Required for Movies, Tv Show and Video upload<br/>
+						Increase it as per your video files size.<br/>
+						Find file php.ini then find  </p>
+<pre><code>
+upload_max_filesize=8G
+post_max_size=8G
+
+</code></pre>
+						<p><a href="https://www.phpflow.com/php/the-uploaded-file-exceeds-the-upload_max_filesize-directive-in-php-ini/" target="_blank"> Read More</a><br/>
+
+							<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Call Back URL.</h5>
+						<p>Google </p>
+<pre><code>
+http://localhost/public/auth/google/callback
+
+</code></pre>
+						<p>Facebook </p>
+<pre><code>
+https://localhost/public/auth/facebook/callback
+
+</code></pre>
+						<p>Amzon </p>
+<pre><code>
+https://localhost/public/auth/amazon/callback
+
+</code></pre>
+						<p>Paystack </p>
+<pre><code>
+https://localhost/public/callback
+
+</code></pre>
+<br/>
+<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Mix Content Error</h5>
+<p>Use SSL setting Full mode and make sure SSL is installed properly in your VPS.</p>
+<p><a href="https://devanswers.co/configure-cloudflare-origin-ca-apache/" target="_blank"> Read More</a><br/>
+	<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Zoom And Big Blue Button Missing in My Application</h5>
+						<p>Go to settings and enable Zoom and Big Blue Button</p><br/>
+		<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>How Many Domain We Use It or Access Denied</h5>
+		<p>You use it only one domain at a time. It assumes localhost or Any IP as a domain. For change domain send us E-Mail with new domain name, Envato user name and purchase code </p><br/>
+		<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>How does the PWA work?</h5>
+		<p>PWA is a lite app, When you open it in Mobile Browser its ask for add app in mobile. It's Not APK. First Setup PWA settings in your script, which is mentioned in the Installation section.</p><br/>
+		<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>ZOOM meeting takes the user out of the website and into Zoom launcher or Zoom web</h5>
+		<p>Zoom Meetings work With Zoom App.</p><br/>
+		<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>The Web Site Just Showing a Blank White Page</h5>
+		<p>Bank white screen due to you give space in app name and mail from name. Go to .env file and remove space and special characters in app name and mail from name.</p><br/>
+		<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Contact Page, Map Shows " development purpose only"</h5>
+		<p>we can not change Google Maps that says "for development only".<br/>
+Google Maps is no longer free. You have to associate a credit card so that you can get billed if your site has requests that exceed the $200 credit they give you monthly for free. That is why you get the watermarked maps.
+For more information, see: https://cloud.google.com/maps-platform/pricing/<br/>
+For more information, see: <a href="https://cloud.google.com/maps-platform/pricing/">https://cloud.google.com/maps-platform/pricing/</a></p>
+		<br/>
+		<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Email Template Location</h5>
+		<p>Go to resources -> view -> email </p><br/>
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-1-2">
+						<h2 class="section-heading">Installation Issues</h2>
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Remove Public From URL</h5>
+						<p>To remove public from URL create .htaccess file in root folder and write following code.</p>
+<pre><code>
+&lt;IfModule mod_rewrite.c&gt;
+	RewriteEngine On 
+	RewriteRule ^(.*)$ public/$1 [L]
+&lt;/IfModule&gt;
+
+</code></pre>
+						<p>For more detail read article : <a href="https://stackoverflow.com/questions/23837933/how-can-i-remove-public-index-php-in-the-url-generated-laravel" title="Remove Public From URL" target="_blank">https://stackoverflow.com/questions/23837933/how-can-i-remove-public-index-php-in-the-url-generated-laravel</a></p>
+
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Debug Mode?</h5>
+						<p>Debug mode will help you to track the error on your website. It is not all preferred to turn the debug mode on live site for very long time.</p>
+						<p>How to turn debug mode on</span></p>
+						<ul>
+							<li>Login to you FTP account.</li>
+							<li>Open and edit&nbsp;<code>.env</code>&nbsp;file.</li>
+						</ul>
+						<p>	Change</p>
+						<pre ><code>APP_DEBUG=false</code></pre>
+						<p>To</p>
+						<pre><code>APP_DEBUG=true</code></pre>
+						<ul>
+							<li>Save and upload the file.</li>
+						</ul>
+						<p><code>false</code>&nbsp;means debug mode is OFF<br>
+							<code>true</code>&nbsp;means debug mode is ON</p>
+						</br>
+						</br>
+						<h5 class="pt-4"><i class="fas fa-question-circle mr-1"></i>419 error</h5>
+						<p>Make sure php version 7.2 and use all following PHP setting. Its show due to session not save. </p>
+						<img src="assets/images/419-1.jpg">
+						<img src="assets/images/419-2.jpg">
+						<img src="assets/images/419-3.png">
+					</section><!--//section-->
+					
+					<section class="docs-section" id="item-1-3">
+						<h2 class="section-heading">Mail/API Settings</h2>
+					    <h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>Mail Settings?</h5>
+						<p>For Email Sending.</p>
+						<p>Open and edit&nbsp;<code>.env</code>&nbsp;file.</p>
+<pre><code>
+MAIL_DRIVER=smtp (some times support sendmail)
+MAIL_HOST=smtp.mailtrap.io (For Gmail = smtp.gmail.com)
+MAIL_PORT=2525  (For Gmail = 465)
+MAIL_USERNAME=youremailid
+MAIL_PASSWORD=yourpassword
+MAIL_ENCRYPTION=null  (For Gmail = ssl)
+
+</code></pre>
+						<h5><b>Note :</b> If showing error in reset password, New User Registration and Payment Gateways then must check your mail setting. Reset password, New User Registration and Payment Gateways error show due to you forget add mail details in .env file.</h5>	<br>
+
+						<img src="assets/images/screenshots/mail-setting.png" alt="Mail Setting">		
+
+						<h5 class="pt-3"><i class="fas fa-question-circle mr-1"></i>API Settings?</h5>
+						<p>Go to Admin -> Payment Gateway Setting</p>
+						<p><b>Note :</b> All api key case sensitive and don't give unwanted space before and after. Pafter enter api Please Enable API.</p>						
+						<br/><br/>
+						<h5><b>For Stripe Payment You Need Stripe Key. Go To: <a href="https://stripe.com/docs" target="_blank">https://stripe.com/docs</a></b></h5>
+						<p><b>Note :</b> All plan and coupons create from eClass Admin Panel. Don't create from strip account.<br/>
+						All your test complete then make stripe to live mode, Stripe Test Mode user and price not support to live mode.<br/>
+						Please make new user and price after stripe live.<br/>
+						Stripe not support $0 price it's need at least $1.<br/>						
+						If Showing Error Check Currency Code In Multipal Currency.<br/>
+						</p>
+<pre><code>
+STRIPE_KEY=yourapikey
+STRIPE_SECRET=yourapisecretcode
+
+</code></pre>						
+						<br/>
+						<h5><b>For Paypal payment gateway You Need Paypal Key. Go To: <a target="_blank" href="https://developer.paypal.com/">https://developer.paypal.com/</a></b></h5>
+<pre><code>
+PAYPAL_CLIENT_ID=yourclientid
+PAYPAL_SECRET_ID=yoursecretid
+PAYPAL_MODE=paypalmode (sandbox or live)
+
+</code></pre>
+						<p><b>Note :</b> All your test complete then make Paypal to live mode, Paypal Sandbox Mode user and price not support to live mode.<br/>
+						Please make new user and price after Paypal live.<br/>
+						All price and coupons create from eClass Admin Panel.<br/>
+						Paypal not support $0 price it's need at least $1.<br/>					
+						Don' Forget To <b>ENABLE</b> PayPAL Payment Gateways After Enter Api.<br/>
+						If Showing Error Check Currency Code In Multipal Currency.<br/>						
+						<br/>
+						<h5><b>For mail chimp or subscribe newsletter You Need Mail chimp Key. Go To: <a href="https://www.mailchimp.com/" target="_blank">https://www.mailchimp.com/</a></b></h5>
+<pre><code>
+MAILCHIMP_API_KEY=yourapikey
+MAILCHIMP_LIST_ID=yourlistid
+
+</code></pre>		
+						<br/>
+						<br/>
+						<h5><b>For Instamojo You Need Instamojo Key. Go To: <a href="https://www.instamojo.com/developers/" target="_blank">https://docs.instamojo.com/docs</a></b></h5>
+						<p><b>Note :</b> All your test complete then make Instamojo to live mode, Instamojo Test Mode user and price not support to live mode.<br/>
+						Please make new user and price after Instamojo live.<br/>
+						All price and coupons create from eClass Admin Panel.<br/>
+						Instamojo not support RS. 0 price it's need at least RS 1.<br/>
+						Don' Forget To <b>ENABLE</b> Instamojo Payment Gateways After Enter Api.<br/>
+						If Showing Error Check Currency Code In Site Multipal Currency, Its Required INR.<br/>
+						
+						<br/>
+						<br/>
+						<h5><b>For Razorpay You Need Razorpay Key. Go To: <a href="https://razorpay.com/" target="_blank">https://razorpay.com/</a></b></h5>
+						<p><b>Note :</b> All your test complete then make Razorpay to live mode, Razorpay Test Mode user and price not support to live mode.<br/>
+						Please make new user and price after Razorpay live.<br/>
+						All price and coupons create from eClass Admin Panel.<br/>
+						Razorpay not support RS. 0 price it's need at least RS 1.<br/>
+						Don' Forget To <b>ENABLE</b> Razorpay Payment Gateways After Enter Api.<br/>
+						If Showing Error Check Currency Code In Site Multipal Currency, Its Required INR.<br/>
+						</p>
+
+						<br/>
+						<br/>
+						<h5><b>For Paystack You Need Paystack Key. Go To: <a href="https://paystack.com/" target="_blank">https://paystack.com/</a></b></h5>
+						<p><b>Note :</b> All your test complete then make Paystack to live mode, Paystack Test Mode user and price not support to live mode.<br/>
+						Please make new user and price after Paystack live.<br/>
+						All price and coupons create from eClass Admin Panel.<br/>
+						Paystack not support NGN. 0 price it's need at least NGN 1.<br/>
+						Don' Forget To <b>ENABLE</b> Paystack Payment Gateways After Enter Api.<br/>
+						If Showing Error Check Currency Code In Site Multipal Currency, Its Required NGN.<br/>
+						</p><br>
+						<img src="assets/images/screenshots/api-setting.png" alt="API Setting">
+						<br>						
+					</section><!--//section-->
+					<section class="docs-section" id="item-1-4">
+						<a href="https://www.youtube.com/watch?v=WkuYh4-NF8M&list=PLs9JJVQP1gn0DjZUG_rboxZUUSJFvZrm5&index=2&t=10s" target="_blank">Watch Script Setup Videos</a>
+						<a href="https://www.youtube.com/watch?v=WkuYh4-NF8M&list=PLs9JJVQP1gn0DjZUG_rboxZUUSJFvZrm5&index=2&t=10s" target="_blank"><img src="assets/images/installation.jpg"></a>
+					</section>
+			    </article><!--//docs-article-->
+
+			    <footer class="footer">
+				    <div class="container text-center py-5">
+				    	<small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="https://mediacity.co.in/index.html" target="_blank">mediacity</a>  |  Documentation  Template by <a class="theme-link" href="https://themes.3rdwavemedia.com" target="_blank">CoderDocs</a></small>
+				        <ul class="social-list list-unstyled pt-4 mb-0">
+						    <li class="list-inline-item"><a href="#"><i class="fab fa-github fa-fw"></i></a></li> 
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram fa-fw"></i></a></li>
+				        </ul><!--//social-list-->
+				    </div>
+			    </footer>
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
+	
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+
+    <!-- Page Specific JS -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/jquery.scrollTo.min.js"></script>
+    <script src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+
+</body>
+</html> 
+
