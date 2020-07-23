@@ -26,7 +26,7 @@ class InstallerController extends Controller
     public function verify(){
 
         if(env('IS_INSTALLED') == 0){
-          $getstatus = @file_get_contents('../public/step1.txt');
+          $getstatus = @file_get_contents(public_path('step1.txt'));
           $getstatus = Crypt::decrypt($getstatus);
           if($getstatus == 'complete'){
             return view('install.verify');
@@ -55,7 +55,7 @@ class InstallerController extends Controller
       if(env('IS_INSTALLED') == 0){
           $status = 'complete';
           $status = Crypt::encrypt($status);
-          @file_put_contents('../public/step2.txt', $status);
+          @file_put_contents(public_path('step2.txt'), $status);
           return redirect()->route('verifyApp');
       }else{
           return redirect('/');
@@ -68,7 +68,7 @@ class InstallerController extends Controller
     public function serverCheck(Request $request){
 
         if(env('IS_INSTALLED') == 0){
-          $getstatus = @file_get_contents('../public/step1.txt');
+          $getstatus = @file_get_contents(public_path('step1.txt'));
           $getstatus = Crypt::decrypt($getstatus);
           if ($getstatus == 'complete') {
               return view('install.servercheck');
@@ -86,7 +86,7 @@ class InstallerController extends Controller
       if (isset($request->eula)) {
           $status = 'complete';
           $status = Crypt::encrypt($status);
-          @file_put_contents('../public/step1.txt', $status);
+          @file_put_contents(public_path('step1.txt'), $status);
           return redirect()->route('servercheck');
 
       }else{
@@ -97,7 +97,7 @@ class InstallerController extends Controller
 
     public function index(){
         if(env('IS_INSTALLED') == 0){
-            $getstatus = @file_get_contents('../public/step3.txt');
+            $getstatus = @file_get_contents(public_path('step3.txt'));
             $getstatus = Crypt::decrypt($getstatus);
             if ($getstatus == 'complete') {
                   return view('install.index');
@@ -124,7 +124,7 @@ class InstallerController extends Controller
 
         $status = 'complete';
         $status = Crypt::encrypt($status);
-        @file_put_contents('../public/step4.txt', $status);
+        @file_put_contents(public_path('step4.txt'), $status);
 
         if($env_update) {
           return redirect()->route('get.step2');
@@ -135,7 +135,7 @@ class InstallerController extends Controller
     public function getstep2(){
       
       if(env('IS_INSTALLED') == 0){
-          $getstatus = @file_get_contents('../public/step4.txt');
+          $getstatus = @file_get_contents(public_path('step4.txt'));
           $getstatus = Crypt::decrypt($getstatus);
           if ($getstatus == 'complete') {
               return view('install.step2');
@@ -168,7 +168,7 @@ class InstallerController extends Controller
             {
                  $status = 'complete';
                  $status = Crypt::encrypt($status);
-                 @file_put_contents('../public/step5.txt', $status);
+                 @file_put_contents(public_path('step5.txt'), $status);
                  return redirect()->route('get.step3');
             }
 
@@ -203,7 +203,7 @@ class InstallerController extends Controller
                     Artisan::call('db:seed');
                 }
 
-                $getstatus = @file_get_contents('../public/step5.txt');
+                $getstatus = @file_get_contents(public_path('step5.txt'));
                 $getstatus = Crypt::decrypt($getstatus);
                 if ($getstatus == 'complete')
                 {
@@ -275,7 +275,7 @@ class InstallerController extends Controller
 
         $status = 'complete';
         $status = Crypt::encrypt($status);
-        @file_put_contents('../public/step6.txt', $status);
+        @file_put_contents(public_path('step6.txt'), $status);
 
         return redirect()->route('get.step4');
 
@@ -285,7 +285,7 @@ class InstallerController extends Controller
     public function getstep4(){
 
       if(env('IS_INSTALLED') == 0){
-        $getstatus = @file_get_contents('../public/step6.txt');
+        $getstatus = @file_get_contents(public_path('step6.txt'));
         $getstatus = Crypt::decrypt($getstatus);
         if ($getstatus == 'complete') {
             return view('install.step4');
@@ -338,7 +338,7 @@ class InstallerController extends Controller
         
         $status = 'complete';
         $status = Crypt::encrypt($status);
-        @file_put_contents('../public/step7.txt', $status);
+        @file_put_contents(public_path('step7.txt'), $status);
 
         return redirect()->route('get.step5');
 
@@ -347,7 +347,7 @@ class InstallerController extends Controller
      public function getstep5(){
       
       if(env('IS_INSTALLED') == 0){
-         $getstatus =  @file_get_contents('../public/step7.txt');
+         $getstatus =  @file_get_contents(public_path('step7.txt'));
          $getstatus = Crypt::decrypt($getstatus);
          if ($getstatus == 'complete') {
           return view('install.step5');
@@ -410,7 +410,7 @@ class InstallerController extends Controller
 
             foreach ($remove_step_files as $key => $file) {
                 
-                unlink('../public/'.$file);
+                @unlink(public_path($file));
 
             }
 
