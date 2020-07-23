@@ -232,7 +232,6 @@
           
 
         </ul>
-      @endif
 
 
     </section>
