@@ -16,7 +16,7 @@ use Crypt;
 class InstallerController extends Controller
 {
     public function verifylicense(){
-        if(Session::get('servercheck')=='OK'){
+        if(Session::get('servercheck') == 'OK') {
           return view('install.verifylicense');
         }else{
           return redirect()->route('servercheck');
@@ -476,45 +476,46 @@ class InstallerController extends Controller
     }
   }
 
-  public function update_status($status)
+    public function update_status($status)
     {
-        $token = (file_exists(public_path() . '/intialize.txt') && file_get_contents(public_path() . '/intialize.txt') != null) ? file_get_contents(public_path() . '/intialize.txt') : '0';
+        return 1;
+        // $token = (file_exists(public_path() . '/intialize.txt') && file_get_contents(public_path() . '/intialize.txt') != null) ? file_get_contents(public_path() . '/intialize.txt') : '0';
 
-         $d = \Request::getHost();
-         $domain = str_replace("www.", "", $d);   
+        //  $d = \Request::getHost();
+        //  $domain = str_replace("www.", "", $d);   
 
-        $ch = curl_init();
+        // $ch = curl_init();
 
-        $options = array(
-            CURLOPT_URL => "https://mediacity.co.in/purchase/public/api/updatestatus",
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_TIMEOUT => 20,
-            CURLOPT_POSTFIELDS => "status={$status}&domain={$domain}",
-            CURLOPT_HTTPHEADER => array(
-                'Accept: application/json',
-                "Authorization: Bearer " . $token
-            ) ,
-        );
+        // $options = array(
+        //     CURLOPT_URL => "https://mediacity.co.in/purchase/public/api/updatestatus",
+        //     CURLOPT_RETURNTRANSFER => true,
+        //     CURLOPT_TIMEOUT => 20,
+        //     CURLOPT_POSTFIELDS => "status={$status}&domain={$domain}",
+        //     CURLOPT_HTTPHEADER => array(
+        //         'Accept: application/json',
+        //         "Authorization: Bearer " . $token
+        //     ) ,
+        // );
 
-        curl_setopt_array($ch, $options);
-        $response = curl_exec($ch);
-        if (curl_errno($ch) > 0)
-        {
-            $message = "Error connecting to API.";
-            return 2;
-        }
+        // curl_setopt_array($ch, $options);
+        // $response = curl_exec($ch);
+        // if (curl_errno($ch) > 0)
+        // {
+        //     $message = "Error connecting to API.";
+        //     return 2;
+        // }
         
-        $responseCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        // $responseCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-        if ($responseCode == 200)
-        {
-            $body = json_decode($response);
-            return $body->status;
-        }
-        else
-        {
-            return 2;
-        }
+        // if ($responseCode == 200)
+        // {
+        //     $body = json_decode($response);
+        //     return $body->status;
+        // }
+        // else
+        // {
+        //     return 2;
+        // }
     }
 
 

@@ -15,23 +15,26 @@ class InitializeController extends Controller
         $alldata = ['app_id' => "25613271", 'ip' => "127.0.0.1", 'domain' => $domain , 'code' => $request->code];
         $data = $this->make_request($alldata);
 
-        if ($data['status'] == 1)
-        {   
-            $put = 1;
-            file_put_contents(public_path().'/config.txt', $put);
-            $status = 'complete';
-            $status = Crypt::encrypt($status);
-            @file_put_contents('../public/step3.txt', $status);
-            return redirect()->route('installApp');
-        }
-        elseif ($data['msg'] == 'Already Register')
-        {   
-            return redirect()->route('verifylicense')->withErrors(['User is already registered']);
-        }
-        else
-        {
-            return back()->withErrors([$data['msg']]);
-        }
+        $put = 1;
+        file_put_contents(public_path().'/config.txt', $put);
+        $status = 'complete';
+        $status = Crypt::encrypt($status);
+        @file_put_contents('../public/step3.txt', $status);
+        return redirect()->route('installApp');
+
+        // if ($data['status'] == 1) {   
+        //     $put = 1;
+        //     file_put_contents(public_path().'/config.txt', $put);
+        //     $status = 'complete';
+        //     $status = Crypt::encrypt($status);
+        //     @file_put_contents('../public/step3.txt', $status);
+        //     return redirect()->route('installApp');
+        // } elseif ($data['msg'] == 'Already Register') {
+        //     session(['servercheck' => 'OK']);
+        //     return redirect()->route('verifylicense')->withErrors(['User is already registered']);
+        // } else {
+        //     return back()->withErrors([$data['msg']]);
+        // }
     }
 
     public function make_request($alldata)
